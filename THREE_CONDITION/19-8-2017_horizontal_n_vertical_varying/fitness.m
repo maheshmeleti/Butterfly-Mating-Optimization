@@ -1,0 +1,6 @@
+function z = fitness(x,y,k,tetha)
+
+z =  (3*(1-(x-k)).^2.*exp(-((x-k).^2) - ((y-k)+1).^2) ... 
+   - 10*((x-k)/5 - (x-k).^3 - (y-k).^5).*exp(-(x-k).^2-(y-k).^2) ... 
+   - 1/3*exp(-((x-k)+1).^2 - (y-k).^2)).*cos(2*pi*0.005*tetha);
+end
